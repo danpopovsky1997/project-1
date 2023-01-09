@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+body {
+    font-family: kanit, sans-serif;
+    font-weight: 300;
+    color: #1f1f1f;
+}
+
+/* Banner and menu items */
+#banner-full {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    text-shadow: #1f1f1f;
+}
+
+h1 {
+    font-family: kanit, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: black;
+
+  }
+#logo {
+    float: left;
+    font-size: 200%;
+    margin-left: 30px;
+}
+
+#banner-menu {
+    font-size: 100%;
+    letter-spacing: 3px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#banner-menu, #logo {
+    line-height: 75px;
+}
+
+#banner-menu li {
+    float: right;
+    list-style-type: none;
+    margin-right: 30px;
+
+}
+
+#banner-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#banner-menu a:hover {
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.active {
+    border-bottom: 1px solid #1f1f1f;
+}
+
+
+/* banner image */
+
+#banner-outer {
+    display: flex;
+    height: 600px;
+    width: auto;
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+
+#banner-image {
+    height: 600px;
+    width: 100%;
+    background: url("../images/banner-image.png") no-repeat center center;
+    background-size: cover;
+    
+
+    animation-name: banner-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* zoom animation */
+
+@keyframes banner-zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform:scale(1.01);
+    }
+}
+
+/* round button on banner */
+
+.round-button {
+    border-radius: 10px;
+    background-color: #eeff00;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-family: kanit, sans-serif;
+    font-size: 150%;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    top: 46.5%; 
+    left: 10%; 
+    transform: translate(-50%, -50%);
+    opacity: 0S;
+  }
+  
+  .round-button:hover {
+    background-color: #eff872;  
+  }
+
+  .round-button a {
+    color: black;
+    text-decoration: none;
+  }
+
+  /*personal training section */
+
+
+#pt-homepage {
+    height: 600px;
+    width: 100%;
+    background: url("../images/pt-homepage.png") no-repeat;
+    float: right;
+    margin: 5px 5px 0 50px;
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+#body-of-text-1 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: kanit, sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+h2 {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .visible {
+    opacity: 1;
+  }
+ 
+  /* slideshow */
+
+  #slideshow {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #slideshow img {
+
+    padding: 10px;
+    width: 5%;
+    height: auto;
+    
+    
+  }
+
+  .img-1 {
+    flex-shrink: 50px;
+    flex: 1;
+    order: 1;
+    margin-left: 50px;
+   
+  }
+
+
+  .img-2 {
+    flex: 1;
+    order: 2;
+  }
+
+  .img-3 {
+    flex: 1;
+    order: 3;
+    margin-right: 50px;
+  }
+
+  .img-1:not(:hover), .img-2:not(:hover), .img-3:not(:hover) {
+    transform: scale(0.95);
+  }
+  
+  .img-1:hover {
+    transform: scale(1.085);
+  }
+  
+  .img-2:hover {
+    transform: scale(1.085);
+  }
+  
+  .img-3:hover {
+    transform: scale(1.085);
+  }
+
+  #slideshow img {
+    opacity: 0;
+    transition: opacity 1.5s;
+  }
+
+.img {
+  width: 100%;
+  height: auto;
+ }
+
+
+  /* slideshow css end*/
+
+#mission-state .box {
+    align-items: center;
+}
+
+#mission-state {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1f1f1f;
+
+  }
+
+
+  .opening-times {
+        font-family: kanit, sans-serif;
+        text-transform: uppercase;
+        list-style: none;
+        text-align: center; 
+  }
+
+  /* social links */
+
+  #footer-contents {
+    height: 150px;
+    }
+    
+    .social-networks {
+        text-align: center;
+    
+    }
+    
+    .social-networks > li {
+        display: inline;
+    }
+     
+    .social-networks i {
+        font-size: 160%;
+        margin: 1%;
+        padding: 5%;
+        color: #3a3a3a;
+    }
+
+      #sc-logo img {
+
+        width: 75px; 
+        height: auto;
+        margin-left: 925px;
+        opacity: 75%;
+      }
+
+
+
+    #footer-copyright {
+        font-family: kanit, sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+
+  
+
+
+  
+
+
+  
